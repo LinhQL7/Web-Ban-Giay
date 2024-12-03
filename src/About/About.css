@@ -1,0 +1,56 @@
+/* src/styles/About.css */
+.about {
+    font-family: Arial, sans-serif;
+    padding: 50px;
+    background-color: #f4f4f4;
+}
+
+.about-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.about-header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.about-header p {
+    font-size: 18px;
+    color: #666;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.about-section h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.about-section p {
+    font-size: 16px;
+    color: #444;
+}
+
+.about-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.about-section ul li {
+    font-size: 16px;
+    color: #444;
+    padding: 5px 0;
+}
+
+.about-footer {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 14px;
+    color: #888;
+}
