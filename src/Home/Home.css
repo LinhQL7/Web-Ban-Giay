@@ -1,16 +1,60 @@
-.home {
-    text-align: center;
-    padding: 100px 20px;
-    background-color: white;
-    color: black;
+/* Phần banner */
+.banner-container {
+    position: relative;
 }
 
+.banner {
+    width: 100%;
+    height: 500px; /* Điều chỉnh chiều cao của banner */
+    object-fit: cover; /* Đảm bảo ảnh phủ đầy phần tử */
+}
+
+.shop-now-btn {
+    position: absolute;
+    bottom: 137px;
+    left: 72%;
+    transform: translateX(-50%); /* Căn giữa nút */
+    background-color: #ff6f61;
+    color: #fff;
+    padding: 12px 25px;
+    width: 225px;
+    height: 55px;
+    font-size: x-large;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.shop-now-btn:hover {
+    background-color: #ff5733;
+    transform: translateX(-50%) scale(1.1); /* Tăng kích thước nút khi hover */
+}
+
+/* Phần tiêu đề */
 .home h1 {
-    font-size: 50px;
-    margin-bottom: 20px;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 2.5rem;
 }
 
 .home p {
-    font-size: 18px;
-    color: black;
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.product-section {
+    text-align: center;
+}
+
+.product-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-img {
+    height: 300px;
+    width: 300px;
 }

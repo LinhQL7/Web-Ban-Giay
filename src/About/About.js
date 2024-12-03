@@ -38,9 +38,6 @@ const About = () => {
                     </ul>
                 </div>
             </div>
-            <div className="about-footer">
-                <p>&copy; 2024 ShoeStore. All rights reserved.</p>
-            </div>
         </div>
     );
 };
