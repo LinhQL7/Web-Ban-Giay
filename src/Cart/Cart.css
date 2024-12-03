@@ -22,8 +22,8 @@
   margin-right: 25px;
 }
 
-.quantity{
-  background-color: rgba(0, 0, 0, 0.800);
+.quantity {
+  background-color: rgba(0, 0, 0, 0.8);
   border-radius: 50%;
   color: rgb(255, 255, 255);
   padding: 0 9.5px;
@@ -58,4 +58,12 @@
   background-color: black;
   padding: 10px;
   cursor: pointer;
+}
+
+.cart-total {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 20px;
+  color: #333;
+  text-align: center;
 }

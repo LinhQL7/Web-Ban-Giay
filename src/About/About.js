@@ -7,13 +7,13 @@ const About = () => {
         <div className="about">
             <div className="about-header">
                 <h1>About Us</h1>
-                <p>Welcome to ShoeStore, where comfort meets style.</p>
+                <p>Welcome to QL7 Shop, where comfort meets style.</p>
             </div>
             <div className="about-content">
                 <div className="about-section">
                     <h2>Our Story</h2>
                     <p>
-                        ShoeStore was founded with the vision of providing high-quality,
+                        QL7 Shop was founded with the vision of providing high-quality,
                         stylish, and affordable footwear for everyone. We believe that the
                         right pair of shoes can make all the difference in your day.
                     </p>

@@ -4,13 +4,33 @@ import { useEffect, useState } from "react";
 
 const Cart = ({ cart, products, handleClearCart, getOffer, offer }) => {
   const [freeItem, setFreeItem] = useState(false);
+
+  // Tính toán tổng giá tiền của giỏ hàng và đảm bảo là số nguyên
+  const calculateTotalPrice = () => {
+    let total = 0;
+    // Tính tổng giá của các sản phẩm trong giỏ hàng
+    cart.forEach(product => {
+      total += product?.price * product?.quantity;
+    });
+
+    // Nếu có sản phẩm được tặng, trừ giá sản phẩm đó
+    if (offer && offer.price) {
+      total -= offer.price;
+    }
+
+    // Làm tròn tổng giá xuống số nguyên
+    return Math.floor(total);
+  };
+
+  // Cập nhật trạng thái freeItem khi có sự thay đổi trong giỏ hàng
   useEffect(() => {
-    if (cart.length) { /* We set this Condition Checking in the useEffect Hook to prevent rendering many times. - a Bug */
+    if (cart.length) {
       setFreeItem(true);
     } else {
       setFreeItem(false);
     }
   }, [cart]);
+
   return (
     <div className="cart">
       <div className="cart-header">
@@ -41,8 +61,6 @@ const Cart = ({ cart, products, handleClearCart, getOffer, offer }) => {
         className={freeItem ? "offer-button" : "offer-button-disabled"}
         disabled={!freeItem ? true : false}
       >
-        {" "}
-        {/* Here, freeItem is false by default. So, we set it [not(!)false = true] to achieve the Condition */}
         Get One For Me
       </button>
       {Object.keys(offer).length !== 0 && (
@@ -56,6 +74,10 @@ const Cart = ({ cart, products, handleClearCart, getOffer, offer }) => {
           </div>
         </div>
       )}
+      {/* Hiển thị tổng giá */}
+      <div className="cart-total">
+        <h3>Total Price: ${calculateTotalPrice()}</h3>
+      </div>
     </div>
   );
 };

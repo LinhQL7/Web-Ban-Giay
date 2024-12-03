@@ -21,7 +21,7 @@
 
 /* Căn giữa menu */
 .navbar-links {
-  flex: 2; /* Menu chiếm 2 phần không gian */
+  flex: 10;
   display: flex;
   justify-content: center; /* Căn giữa menu */
   align-items: center;
